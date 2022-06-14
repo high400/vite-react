@@ -3,16 +3,8 @@ import "./App.css";
 import List from "./components/List";
 
 function App() {
-  const [count, setCount] = useState(0);
+  
   const HeaderText = "I am going to kick your butt";
-
-  const decreaseCount = () => {
-    setCount(count - 1);
-  };
-
-  const increaseCount = () => {
-    setCount(count + 1);
-  };
 
   return (
     <div className="App">
