@@ -1,42 +1,29 @@
-import { useState } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./List.css";
-
+import Quang_trung from "./Quang_Trung_1.png";
+import sarugami from "./Sarugami_Armor_1.png";
 
 function List() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
 
   return (
     <div className="List">
       <header className="List-header">
-        <img src={logo} className="List-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>This is where our app begins</p>
-        <p>
-          <a
-            className="List-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="List-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+        <img src={Quang_trung} alt="logo" />
       </header>
+      <body>
+        <p>The count is: {count} </p>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+      </body>
     </div>
   );
 }

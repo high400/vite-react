@@ -1,45 +1,42 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import List from "./components/List";
-
 
 function App() {
   const [count, setCount] = useState(0);
   const HeaderText = "I am going to kick your butt";
 
+  const decreaseCount = () => {
+    setCount(count - 1);
+  };
+
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>{HeaderText}</p>
         <List />
         <p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://kengan-omega-manga.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            My favorite manga
           </a>
           {" | "}
           <a
             className="App-link"
-            href="https://vitejs.dev/guide/features.html"
+            href="https://www.youtube.com/channel/UCl_lP9Kw-Uw3tTXO34dhodA/videos"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Vite Docs
+            Check out my videos on youtube 
           </a>
         </p>
-         
       </header>
     </div>
   );
