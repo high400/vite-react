@@ -1,15 +1,17 @@
 import { useState } from "react";
 import "./App.css";
 import List from "./components/List";
+import Employees from "./components/Employees";
 
 function App() {
-  
   const HeaderText = "I am going to kick your butt";
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <List />
+        <Employees />
         <p>
           <a
             className="App-link"
@@ -26,7 +28,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Check out my videos on youtube 
+            Check out my videos on youtube
           </a>
         </p>
       </header>
