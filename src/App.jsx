@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import List from "./components/List";
 import Employees from "./components/Employees";
@@ -16,6 +16,8 @@ function App() {
     { id: 4, firstName: "Hue", surName: "Nguyen" },
   ];
 
+  const [setShowCounter, showCounter] = useState(false);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -28,8 +30,13 @@ function App() {
            
           );
         })} */}
+        {/* <div> */}
+        {/* <Button onClick={() => setShowCounter(!showCounter)}>
+          {showCounter ? "Hide Counter" : "Show Counter"}
+        </Button> */}
         <Employees />
-        
+        {/* {showCounter && <Employees />} */}
+        {/* </div> */}
         <p>
           <a
             className="App-link"
